@@ -61,13 +61,17 @@ describe('Apuestas Online SEO', () => {
       .should('have.length', 0)
   })
 
-  it(' has all the canconicals valid', () => {
+  it('has all the canonicals valid', () => {
     cy.get('link')
       .should('have.attr', 'rel')
       .and('equal', 'canonical')
     
     cy.get('link')
       .should('have.attr', 'href')
+      .and('not.be.empty')
+
+    cy.get('link')
+      .should('have.attr', 'rel')
       .and('not.be.empty')
   })
 
