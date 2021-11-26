@@ -1,4 +1,4 @@
 Cypress.Commands.add('acceptLegalAgePopUp', () => { 
-    cy.get('.approve').click()
+    cy.get('.approve', { timeout: 900000}).click()
  })
  
