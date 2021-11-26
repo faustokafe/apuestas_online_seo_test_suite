@@ -8,15 +8,20 @@ describe('Apuestas Online SEO', () => {
   })
 
   it('has only one H1 element', () => {
-    cy.get('h1').should('have.length', 1)
+    cy.get('h1')
+      .should('have.length', 1)
   })
 
   it('has at least two H2 elements', () => {
-    cy.get('h2').its('length').should('be.gte', 2)
+    cy.get('h2')
+      .its('length')
+      .should('be.gte', 2)
   })
 
   it('has alt tags on all images', () => {
-    cy.get('img').should('have.attr', 'alt')
+    cy.get('img')
+      .should('have.attr', 'alt')
+      .and('not.to.be', 'empty')
   })
 
   it('has only one heading with with a title and meta description', function () {
@@ -31,6 +36,8 @@ describe('Apuestas Online SEO', () => {
       .get('meta[name="description"]')
       .should('have.prop', 'content')
       .and('equal', this.home.metaDescriptionText)
+      .its('length').and('be.gte', 50)
+      .and('be.lt', 160)
   })
 
   it('has a viewport meta tag', function () {

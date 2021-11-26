@@ -6,6 +6,8 @@
 
 The test strategy chosen is to fully cover the functional requirements, via an hybrid and automated testing approach. Test cases will exercise both the User Interface (UI) and the API, using a commom test automation framework: [Cypress](cypress.io).
 
+Besides the pre-defined test scenarios, extra validations are performed based on the [SEO cheat sheet](https://9elements.com/seo-cheat-sheet/)
+
 ### TEST FRAMEWORK
 
 Cypress was selected to be the only used test automation framework, both on UI and API levels, due to the:
