@@ -11,6 +11,7 @@ The test strategy chosen is to fully cover the functional requirements, via an h
 Cypress was selected to be the only used test automation framework, both on UI and API levels, due to the:
 - Reduced complexity due to the usage of a single tooling.
 - Ability of performing [API requests](https://docs.cypress.io/api/commands/request) and provide embedded assertions.
+- Support of [Cypress fixtures](https://docs.cypress.io/api/commands/fixture) for test data handling.
 - User friendly UI and also command line support. 
 - Wide range of [Assertions](https://docs.cypress.io/guides/references/assertions). 
 
