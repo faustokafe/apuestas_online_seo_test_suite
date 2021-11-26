@@ -1,14 +1,10 @@
 describe('Apuestas Online SEO', () => {
 
-  before(function () {
-    cy.fixture('apuestas-online').then((home) => {
+  beforeEach( function () {
+    cy.fixture('apuestas-online.json').then((home) => {
       this.home = home
     })
-  })
-
-  beforeEach( () => {
     cy.visit('https://apuestasonline.net/')
-    // cy.acceptLegalAgePopUp()
   })
 
   it('has only one H1 element', () => {
@@ -23,13 +19,13 @@ describe('Apuestas Online SEO', () => {
     cy.get('img').should('have.attr', 'alt')
   })
 
-  it.skip('has only one heading with with a title and meta description', function () {
+  it('has only one heading with with a title and meta description', function () {
     cy.get('head')
       .should('have.length', 1)
     
     cy.get('head title')
       .should('have.length', 1)
-      .and('have.text', this.home.title)
+      .and('have.text', this.home.metaTitle)
     
     cy.get('head')
       .get('meta[name="description"]')
@@ -37,11 +33,11 @@ describe('Apuestas Online SEO', () => {
       .and('equal', this.home.metaDescriptionText)
   })
 
-  it.skip('has a viewport meta tag', function () {
+  it('has a viewport meta tag', function () {
     cy.get('head')
       .get('meta[name="viewport"]')
       .should('have.prop', 'content')
-      .and('equal', this.home.viewport)
+      .and('equal', this.home.metaViewport)
   })
 
   it('has content divided by multiple subheadings', () => {
