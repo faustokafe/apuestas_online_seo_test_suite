@@ -42,7 +42,7 @@ describe('Apuestas Online SEO', () => {
 
   it('has content divided by multiple subheadings', () => {
     cy.get('.content').get('h2')
-      .should('have.length', 7)
+      .should('have.length', 8)
 
     cy.get('.content').get('h3')
       .should('have.length', 24)
