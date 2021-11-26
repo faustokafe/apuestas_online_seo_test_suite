@@ -2,7 +2,6 @@ describe('Site has robots.txt target', () => {
 
     beforeEach( () => {
       cy.visit('https://apuestasonline.net/')
-      cy.acceptLegalAgePopUp()
     })
   
     it('Contains a robots.txt', function () {
