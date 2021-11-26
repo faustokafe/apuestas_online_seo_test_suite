@@ -1,5 +1,7 @@
 {
   "devDependencies": {
-    "cypress": "^9.1.0"
+    "cypress": "^9.1.0",
+    "cypress-html-validate": "^2.1.2",
+    "html-validate": "^6.1.3"
   }
 }
