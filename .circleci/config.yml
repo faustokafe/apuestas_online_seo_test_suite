@@ -5,4 +5,4 @@ workflows:
     example-workflow:
       jobs:
         - cypress/run:
-            browser: chrome 
+            browser: electron 
