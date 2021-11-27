@@ -82,4 +82,10 @@ describe('Apuestas Online SEO', () => {
       .should('have.attr', 'lang')
       .and('not.be.empty')
   })
+
+  it('has less than 150 links', () => {
+    cy.get('body')
+      .find('a')
+      .its('length').and('be.lt', 150)
+  })
 })
