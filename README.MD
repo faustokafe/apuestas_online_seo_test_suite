@@ -39,4 +39,11 @@ Vverify the check for the pages from the main menu on top.
 
 ## TEST CASES DETAILS
 
+### HTML SPECS VALIDATION
+*File*:* html-specs.js
+
+Making usage of the plugin [Cypress HTML Validate](https://www.npmjs.com/package/cypress-html-validate).
+> Validates HTML using html-validate. It automatically fetches the active source markup from the browser and validates, failing the test if any validation errors is encountered.
+
+
 -WORK IN PROGRESS-
