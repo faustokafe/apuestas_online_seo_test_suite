@@ -45,5 +45,21 @@ Vverify the check for the pages from the main menu on top.
 Making usage of the plugin [Cypress HTML Validate](https://www.npmjs.com/package/cypress-html-validate).
 > Validates HTML using html-validate. It automatically fetches the active source markup from the browser and validates, failing the test if any validation errors is encountered.
 
+### SEO CHECKS
+1.   It has only one H1 element.
+2.   It has at least two H2 elements.
+3.   It has alt tags on all images and defined width and height.
+4.   It has only one heading with with a title and meta description.
+5.   It has a viewport meta tag.
+6.   It has content divided by multiple subheadings.
+7.   It has all the canonicals valid.
+8.   It has a HTML lang set.
+9.   It has less than 150 links'. [Skipped]
+
+### URL CHECKS
+
+### ROBOTS TXT CHECKS
+
+
 
 -WORK IN PROGRESS-
