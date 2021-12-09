@@ -17,11 +17,13 @@ describe('robots.txt related functionality', () => {
 
   it('Contains a robots.txt file', () => {
     cy.request('https://apuestasonline.net/robots.txt')
-      .its('body').should('include', 'Sitemap: https://apuestasonline.net/sitemap_index.xml')
+      .its('body')
+      .should('include', 'Sitemap: https://apuestasonline.net/sitemap_index.xml')
   })
 
   it('Contains a sitemap', () => {
     cy.request('https://apuestasonline.net/sitemap_index.xml')
-      .its('body').should('include', 'XML Sitemap')
+      .its('body')
+      .should('include', 'XML Sitemap')
   })
 })
