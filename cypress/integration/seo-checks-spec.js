@@ -49,17 +49,21 @@ describe('Apuestas Online SEO', () => {
       .and('equal', this.home.metaViewport)
   })
 
-  it('has content divided by multiple subheadings', () => {
-    cy.get('.content').get('h2')
+  it.skip('has content divided by multiple subheadings', () => {
+    cy.get('.content')
+      .get('h2')
       .should('have.length', 7)
 
-    cy.get('.content').get('h3')
+    cy.get('.content')
+      .get('h3')
       .should('have.length', 24)
 
-    cy.get('.content').get('h4')
+    cy.get('.content')
+      .get('h4')
       .should('have.length', 5)
 
-    cy.get('.content').get('h5')
+    cy.get('.content')
+      .get('h5')
       .should('have.length', 0)
   })
 
