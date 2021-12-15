@@ -16,22 +16,26 @@ describe('Apuestas Online URLs validation', () => {
                         cy.log('Affiliate link detected')
                         cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
                         cy.get('@links').then((response) => {
-                            // cy.log(response.status)
                             expect(response.status).to.equal(301)
                         }) 
+                    }
+                    else if (link.prop('href').includes('#')) {
+                        cy.log('Internal anchor link detected')
+                        cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
+                        cy.get('@links').then((response) => {
+                            expect(response.status).to.equal(200)
+                        })
                     }
                     else if (link.prop('href').includes('linkedin')) {
                         cy.log('LinkedIn link detected')
                         cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
                         cy.get('@links').then((response) => {
-                            // cy.log(response.status)
                             expect(response.status).to.equal(999)
                         }) 
                     }
                     else {
                         cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
                         cy.get('@links').then((response) => {
-                            // cy.log(response.status)
                             expect(response.status).to.equal(200)
                         })
                     }
