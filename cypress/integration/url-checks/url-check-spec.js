@@ -7,13 +7,33 @@ describe('Apuestas Online URLs validation', () => {
     it('Links are valid and working, without 404 responses', function () {
         cy.get('body').get('a')
             .each(link => {
-                // should('have.attr', 'href')
                 cy.log(link.prop('href'))
                 try {
                     if (link.prop('href') === '') {
                         throw ("Link missing href content")
-                    } else {
-                        cy.request( { failOnStatusCode: false, url: link.prop('href') } )
+                    } 
+                    else if (link.prop('href').includes('/ir/')) {
+                        cy.log('Affiliate link detected')
+                        cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
+                        cy.get('@links').then((response) => {
+                            // cy.log(response.status)
+                            expect(response.status).to.equal(301)
+                        }) 
+                    }
+                    else if (link.prop('href').includes('linkedin')) {
+                        cy.log('LinkedIn link detected')
+                        cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
+                        cy.get('@links').then((response) => {
+                            // cy.log(response.status)
+                            expect(response.status).to.equal(999)
+                        }) 
+                    }
+                    else {
+                        cy.request( { url: link.prop('href'), failOnStatusCode: false, followRedirect: false } ).as('links')
+                        cy.get('@links').then((response) => {
+                            // cy.log(response.status)
+                            expect(response.status).to.equal(200)
+                        })
                     }
                 } catch (error) {
                     cy.log("Error: " + error);
