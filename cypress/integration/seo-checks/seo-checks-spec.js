@@ -18,14 +18,6 @@ describe('Apuestas Online SEO', () => {
       .should('be.gte', 2)
   })
 
-  it('has alt tags on all images and defined width and height', () => {
-    cy.get('img').then(($img) => {
-      expect($img).to.have.attr('alt').not.to.be.empty
-      expect($img).to.have.attr('width')
-      expect($img).to.have.attr('height')
-    })
-  })
-
   it('has only one heading with with a title and meta description', function () {
     cy.get('head')
       .should('have.length', 1)
