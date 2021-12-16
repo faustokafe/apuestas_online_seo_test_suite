@@ -12,7 +12,7 @@ describe('robots.txt related functionality', () => {
     cy.get('head')
       .get('meta[name="robots"]')
       .should('have.prop', 'content')
-      .and('equal', this.home.metaRobots)
+      .and('equal', this.home.meta.robots)
   })
 
   it('Contains a robots.txt file', () => {
