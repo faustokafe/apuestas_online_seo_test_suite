@@ -1,6 +1,8 @@
 {
-    "metaDescriptionText": "Comparador de apuestas que analiza en detalle: cuotas, deportes, promos, app, seguridad y la mejor oferta de apuestas online España y Latam en diciembre 2021",
-    "metaTitle": "Mejores apuestas online 2021 → Ranking España y Latam",
-    "metaViewport": "width=device-width, initial-scale=1.0, maximum-scale=5.0",
-    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    "meta": {
+        "descriptionText": "Comparador de apuestas que analiza en detalle: cuotas, deportes, promos, app, seguridad y la mejor oferta de apuestas online España y Latam en diciembre 2021",
+        "title": "Mejores apuestas online 2021 → Ranking España y Latam",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=5.0",
+        "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    }
 }
