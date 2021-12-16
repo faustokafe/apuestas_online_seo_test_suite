@@ -1,9 +1,6 @@
-describe('Apuestas Online SEO', () => {
+describe('Apuestas Online SEO general checklist', () => {
 
-  beforeEach( function () {
-    cy.fixture('apuestas-online.json').then((home) => {
-      this.home = home
-    })
+  before( function () {
     cy.visit('https://apuestasonline.net/')
   })
 
@@ -21,24 +18,6 @@ describe('Apuestas Online SEO', () => {
   it('has only one heading with with a title and meta description', function () {
     cy.get('head')
       .should('have.length', 1)
-    
-    cy.get('head title')
-      .should('have.length', 1)
-      .and('have.text', this.home.metaTitle)
-    
-    cy.get('head')
-      .get('meta[name="description"]')
-      .should('have.prop', 'content')
-      .and('equal', this.home.metaDescriptionText)
-      .its('length').and('be.gte', 50)
-      .and('be.lt', 160)
-  })
-
-  it('has a viewport meta tag', function () {
-    cy.get('head')
-      .get('meta[name="viewport"]')
-      .should('have.prop', 'content')
-      .and('equal', this.home.metaViewport)
   })
 
   it.skip('has content divided by multiple subheadings', () => {
