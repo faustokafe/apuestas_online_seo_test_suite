@@ -4,7 +4,7 @@ describe('Images SEO checklist', () => {
         cy.visit('https://apuestasonline.net/')
       })
 
-    it.skip('has alt tags on all images and defined width and height', () => {
+    it('has alt tags on all images and defined width and height', () => {
         cy.get('img').then(($img) => {
           expect($img).to.have.attr('alt').not.to.be.empty
           expect($img).to.have.attr('width')
@@ -12,7 +12,7 @@ describe('Images SEO checklist', () => {
         })
     })
 
-    it.skip('responds 200 OK for all image requests', () => {
+    it('responds 200 OK for all image requests', () => {
         cy.get('img')
             .each(img => {
                 cy.request(img.attr('src'))
