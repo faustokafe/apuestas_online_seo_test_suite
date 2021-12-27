@@ -5,5 +5,4 @@ describe('HMTL Specs', () => {
         cy.htmlvalidate();
     })
 })
-
   

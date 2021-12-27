@@ -18,7 +18,7 @@ describe('Meta SEO checklist', () => {
           .and('equal', this.home.meta.viewport)
       })
 
-      it('has a title tag and a meta description tag', function () {
+    it('has a title tag and a meta description tag', function () {
         cy.get('head title')
         .should('have.length', 1)
         .and('have.text', this.home.meta.title)
@@ -29,5 +29,5 @@ describe('Meta SEO checklist', () => {
         .and('equal', this.home.meta.descriptionText)
         .its('length').and('be.gte', 50)
         .and('be.lt', 160)
-      })
+    })
 })
