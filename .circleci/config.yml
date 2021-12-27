@@ -3,10 +3,10 @@ orbs:
   cypress: cypress-io/cypress@1
   percy-dev: pixolith/percy-dev@1.0.8
 workflows:
-  commit-workflow:
-      jobs:
-        - cypress/run:
-            browser: electron
+  # commit-workflow:
+  #     jobs:
+  #       - cypress/run:
+  #           browser: electron
   nightly:
     triggers:
       - schedule:
