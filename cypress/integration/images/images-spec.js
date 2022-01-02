@@ -1,7 +1,7 @@
 describe('Images SEO checklist', () => {
 
     before( () => {
-        cy.visit('https://apuestasonline.net/')
+        cy.visit('')
       })
 
     it('has alt tags on all images and defined width and height', () => {
