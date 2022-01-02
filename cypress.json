@@ -1,1 +1,8 @@
-{}
+{
+    "nodeVersion": "bundled",
+    "env": {
+        "robots": "https://apuestasonline.net/robots.txt",
+        "sitemap": "https://apuestasonline.net/sitemap_index.xml"
+    },
+    "baseUrl": "https://www.apuestasonline.net"
+}
