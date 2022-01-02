@@ -1,10 +1,10 @@
 describe('Apuestas Online URLs validation', () => {
 
     beforeEach( () => {
-      cy.visit('https://apuestasonline.net/')
+      cy.visit('')
     })
   
-    it('Links are valid and working, without 404 responses', function () {
+    it.skip('Links are valid and working, without 404 responses', function () {
         cy.get('body').get('a')
             .each(link => {
                 cy.log(link.prop('href'))
