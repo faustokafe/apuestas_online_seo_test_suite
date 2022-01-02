@@ -1,14 +1,13 @@
 describe('Meta SEO checklist', () => {
 
     before( () => {
-        cy.visit('https://apuestasonline.net/')
+        cy.visit('')
       })
 
     beforeEach( function () {
       cy.fixture('apuestas-online.json').then((home) => {
         this.home = home
       })
-      cy.visit('https://apuestasonline.net/')
     })
 
     it('has a viewport meta tag', function () {
