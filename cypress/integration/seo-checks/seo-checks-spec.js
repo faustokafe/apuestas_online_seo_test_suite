@@ -1,7 +1,7 @@
 describe('Apuestas Online SEO general checklist', () => {
 
   before( function () {
-    cy.visit('https://apuestasonline.net/')
+    cy.visit('')
   })
 
   it('has only one H1 element', () => {
