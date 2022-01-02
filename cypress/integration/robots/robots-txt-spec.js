@@ -7,7 +7,7 @@ describe('robots.txt related functionality', () => {
   })
 
   it('has a robots meta tag', function () {
-    cy.visit('https://apuestasonline.net/')
+    cy.visit('')
 
     cy.get('head')
       .get('meta[name="robots"]')
@@ -16,13 +16,13 @@ describe('robots.txt related functionality', () => {
   })
 
   it('Contains a robots.txt file', () => {
-    cy.request('https://apuestasonline.net/robots.txt')
+    cy.request(Cypress.env('robots'))
       .its('body')
-      .should('include', 'Sitemap: https://apuestasonline.net/sitemap_index.xml')
+      .should('include', 'Sitemap: ' + Cypress.env('sitemap'))
   })
 
   it('Contains a sitemap', () => {
-    cy.request('https://apuestasonline.net/sitemap_index.xml')
+    cy.request(Cypress.env('sitemap'))
       .its('body')
       .should('include', 'XML Sitemap')
   })
